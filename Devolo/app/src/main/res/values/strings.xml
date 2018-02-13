@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Devolo</string>
+
+    <string name="title_label">Title: </string>
+    <string name="username_label">Username: </string>
+    <string name="error_text">An error has occurred.</string>
+    <string name="nothing_selected">Nothing selected!!!</string>
+
+    //menu titles
+    <string name="show_images_title">Show images</string>
+    <string name="select_all_title">Select all</string>
+    <string name="clear_all_title">Clear all</string>
+</resources>
