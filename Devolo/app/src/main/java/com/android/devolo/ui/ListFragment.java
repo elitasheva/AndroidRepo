@@ -144,7 +144,7 @@ public class ListFragment extends Fragment implements LoaderManager.LoaderCallba
                 List<ListItemInfo> listItemInfo = parseJson(data);
                 adapter.setListItemInfo(listItemInfo);
             } catch (JSONException e) {
-                e.printStackTrace();
+                Log.e(TAG, e.getMessage());
             }
         }
     }
