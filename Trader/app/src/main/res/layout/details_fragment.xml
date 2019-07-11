@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--It is a complex screen with many elements and relations between them.
+Used ConstraintLayout instead of nested layouts.
+Used a guideline to separate the screen.
+Used chain to spread the views above the left button.-->
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/textView"
+            android:text="@string/alert_msg"
+            android:layout_marginStart="@dimen/details_fragment_elements_margin_start"
+            android:layout_marginTop="@dimen/details_fragment_elements_margin_top"
+            style="@style/PrimaryTextBigDark"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+            android:id="@+id/editText"
+            android:layout_marginStart="@dimen/details_fragment_elements_margin_start"
+            android:layout_marginTop="@dimen/details_fragment_elements_margin_top"
+            android:text="0.90100"
+            android:ems="5"
+            android:textAlignment="center"
+            android:background="@drawable/custom_edit_text"
+            style="@style/PrimaryTextMediumDark"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+            android:id="@+id/btn_plus"
+            android:text="+"
+            android:layout_marginStart="8dp"
+            style="@style/UpDownButton"
+            app:layout_constraintDimensionRatio="H, 1:1.2"
+            app:layout_constraintStart_toEndOf="@+id/editText"
+            app:layout_constraintTop_toTopOf="@+id/editText"
+            app:layout_constraintBottom_toBottomOf="@+id/editText"/>
+
+    <Button
+            android:id="@+id/btn_minus"
+            android:text="-"
+            android:layout_marginStart="8dp"
+            style="@style/UpDownButton"
+            app:layout_constraintDimensionRatio="H, 1:1.2"
+            app:layout_constraintStart_toEndOf="@+id/btn_plus"
+            app:layout_constraintTop_toTopOf="@+id/btn_plus"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_plus"/>
+
+    <TextView
+            android:id="@+id/textView2"
+            android:text="@string/text1"
+            android:layout_marginStart="@dimen/details_fragment_elements_margin_start"
+            android:layout_marginTop="@dimen/details_fragment_elements_margin_top"
+            style="@style/PrimaryTextMediumDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText"/>
+
+    <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text2"
+            style="@style/PrimaryTextMediumLight"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+
+    <TextView
+            android:id="@+id/textView9"
+            android:text="@string/price_type_text"
+            android:layout_marginStart="@dimen/details_fragment_elements_margin_start"
+            android:layout_marginTop="@dimen/details_fragment_price_type_margin_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            style="@style/PrimaryTextMediumDark"/>
+
+    <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/details_fragment_radio_group_margin_start"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toTopOf="@+id/textView9"
+            app:layout_constraintBottom_toBottomOf="@+id/textView9">
+
+        <RadioButton
+                android:text="@string/price_type_sell"
+                android:button="@drawable/custom_radio_button"
+                android:layout_marginStart="@dimen/details_fragment_radio_button_margin_start"
+                android:layout_marginEnd="@dimen/details_fragment_radio_button_margin_end"
+                android:paddingStart="@dimen/details_fragment_radio_button_padding_start"
+                android:paddingEnd="@dimen/details_fragment_radio_button_padding_end"
+                style="@style/PrimaryTextMediumDark"/>
+
+        <RadioButton
+                android:text="@string/price_type_buy"
+                android:button="@drawable/custom_radio_button"
+                android:layout_marginStart="@dimen/details_fragment_radio_button_margin_start"
+                android:layout_marginEnd="@dimen/details_fragment_radio_button_margin_end"
+                android:paddingStart="@dimen/details_fragment_radio_button_padding_start"
+                android:paddingEnd="@dimen/details_fragment_radio_button_padding_end"
+                style="@style/PrimaryTextMediumDark"/>
+    </RadioGroup>
+
+    <TextView
+            android:id="@+id/textView5"
+            android:text="@string/delivery_text"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="@dimen/details_fragment_elements_margin_top"
+            android:layout_marginStart="@dimen/details_fragment_elements_margin_start"
+            android:layout_marginEnd="8dp"
+            style="@style/PrimaryTextMediumDark"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"/>
+
+    <TextView
+            android:text="@string/by_email"
+            android:id="@+id/textView3"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/colorTextGrayLighter"
+            android:layout_marginStart="8dp"
+            style="@style/PrimaryTextMediumLight"
+            app:layout_constraintEnd_toStartOf="@+id/textView4"
+            app:layout_constraintBottom_toTopOf="@+id/apply_now"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+            android:text="@string/by_sms"
+            android:id="@+id/textView4"
+            android:textColor="@color/colorTextGrayLighter"
+            android:layout_marginStart="18dp"
+            style="@style/PrimaryTextMediumLight"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/textView6"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="@+id/textView3"/>
+
+    <TextView
+            android:text="@string/push"
+            android:id="@+id/textView6"
+            android:textColor="@color/colorTextGrayLighter"
+            android:layout_marginStart="19dp"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView4"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            style="@style/PrimaryTextMediumLight"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"/>
+
+    <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/details_fragment_settings_img_margin_end"
+            android:adjustViewBounds="true"
+            android:src="@drawable/vector_ic_settings"
+            app:layout_constraintTop_toTopOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="W, 1:1"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3"/>
+
+    <Button
+            android:id="@+id/apply_now"
+            android:text="@string/apply_now_text"
+            android:layout_marginStart="@dimen/details_fragment_btn_margin"
+            android:layout_marginBottom="@dimen/details_fragment_btn_margin"
+            android:layout_marginEnd="@dimen/details_fragment_btn_margin"
+            style="@style/ApplyButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"/>
+
+    <Button
+            android:id="@+id/not_now"
+            android:text="@string/not_now_text"
+            android:layout_marginEnd="@dimen/details_fragment_btn_margin"
+            android:layout_marginStart="@dimen/details_fragment_btn_margin"
+            style="@style/ApplyButton"
+            app:layout_constraintBottom_toBottomOf="@+id/apply_now"
+            app:layout_constraintTop_toTopOf="@+id/apply_now"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

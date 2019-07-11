@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Trader</string>
+    //list fragment
+    <string name="title_txt">Professional Account Offer</string>
+    <string name="short_description">Apply for Plus500\'s Professional Client Account to be able to trade with maximum leverage of up to 1:300.</string>
+    <string name="btn_sell_text">Sell</string>
+    <string name="btn_buy_text">Buy</string>
+    //details fragment
+    <string name="alert_msg">Alert me when price reaches</string>
+    <string name="text1">1.00% above current price</string>
+    <string name="text2">Current buy rate 0.892066</string>
+    <string name="price_type_text">Price type</string>
+    <string name="delivery_text">Delivery methods</string>
+    <string name="by_email">By email</string>
+    <string name="by_sms">By SMS</string>
+    <string name="push">Push</string>
+    <string name="apply_now_text">Apply Now</string>
+    <string name="not_now_text">Not Now</string>
+    <string name="price_type_sell">Sell</string>
+    <string name="price_type_buy">Buy</string>
+
+</resources>

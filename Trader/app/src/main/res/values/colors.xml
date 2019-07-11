@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#808080</color>
+    
+    <color name="colorButton">#2966C2</color>
+    <color name="colorPrice">#FF0000</color>
+    <color name="colorPositive">#33C433</color>
+    <color name="colorNegative">#FF0000</color>
+    <color name="colorTextBlack">#000000</color>
+    <color name="colorTextGrayDark">#484848</color>
+    <color name="colorTextGrayLight">#989898</color>
+    <color name="colorTextGrayLighter">#C8C8C8</color>
+
+    <color name="recycler_view_border_color">#C8C8C8</color>
+</resources>
