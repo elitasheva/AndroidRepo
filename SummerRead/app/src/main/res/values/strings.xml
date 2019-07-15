@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SummerRead</string>
+
+    <string-array name="status">
+        <item>read</item>
+        <item>unread</item>
+    </string-array>
+
+</resources>

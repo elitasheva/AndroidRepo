@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listFragment2">
+    <fragment
+        android:id="@+id/listFragment2"
+        android:name="com.android.summerread.ui.ListFragment"
+        android:label="list_fragment"
+        tools:layout="@layout/list_fragment" >
+        <action
+            android:id="@+id/action_listFragment2_to_detailsFragment2"
+            app:destination="@id/detailsFragment2" />
+        <action
+            android:id="@+id/action_listFragment2_to_addEditFragment"
+            app:destination="@id/addEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment2"
+        android:name="com.android.summerread.ui.DetailsFragment"
+        android:label="details_fragment"
+        tools:layout="@layout/details_fragment" >
+        <argument
+            android:name="id"
+            app:argType="long"/>
+        <action
+            android:id="@+id/action_detailsFragment2_to_addEditFragment"
+            app:destination="@id/addEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditFragment"
+        android:name="com.android.summerread.ui.AddEditFragment"
+        android:label="add_edit_fragment"
+        tools:layout="@layout/add_edit_fragment" >
+        <argument
+            android:name="id"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_addEditFragment_to_listFragment2"
+            app:destination="@id/listFragment2"
+            app:popUpTo="@+id/navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
